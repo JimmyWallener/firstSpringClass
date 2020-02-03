@@ -25,8 +25,8 @@ public class hello {
 	} catch (Exception e) {
 		e.printStackTrace();
 		System.out.println(e);
-		return 0;
-	} 
+		
+	} return 0;
 }
 @RequestMapping(value = "/sub", method = RequestMethod.GET)
 public int sub(int digitOne, int digitTwo) {
@@ -37,8 +37,8 @@ public int sub(int digitOne, int digitTwo) {
 	} catch (Exception e) {
 		e.printStackTrace();
 		System.out.println(e);
-		return 0;
-	} 
+		
+	} return 0;
 }
 @RequestMapping(value = "/div", method = RequestMethod.GET)
 public double div(double digitOne, double digitTwo) {
@@ -49,8 +49,8 @@ public double div(double digitOne, double digitTwo) {
 	} catch (Exception e) {
 		e.printStackTrace();
 		System.out.println(e);
-		return 0;
-	} 
+		
+	} return 0;
 }
 @RequestMapping(value = "/multi", method = RequestMethod.GET)
 public int multi(int digitOne, int digitTwo) {
@@ -61,8 +61,33 @@ public int multi(int digitOne, int digitTwo) {
 	} catch (Exception e) {
 		e.printStackTrace();
 		System.out.println(e);
-		return 0;
-	} 
+		
+	} return 0;
 }
 
+// added this after leaving class while waiting for the train to arrive. 
+// Thought it might be better to set everything inside one method
+
+@RequestMapping(value = "/math", method = RequestMethod.GET)
+	public double math(double digitOne, String op, double digitTwo) {
+	
+	try {
+		
+		switch (op) {
+		case "+": return digitOne + digitTwo;
+		case "*": return digitOne * digitTwo;
+		case "-": return digitOne - digitTwo;
+		case "/": return digitOne / digitTwo;
+		default: return 0;
+		}
+	} catch (Exception e) {
+		e.printStackTrace();
+		System.out.println(e);
+		
+	}
+	return 0;
+	
+	
+
+}
 }
