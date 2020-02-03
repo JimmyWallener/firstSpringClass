@@ -78,12 +78,12 @@ public int multi(int digitOne, int digitTwo) {
 		case "*": return digitOne * digitTwo;
 		case "-": return digitOne - digitTwo;
 		case "/": return digitOne / digitTwo;
+		case "p": return Math.pow(digitOne, digitTwo);
 		default: return 0;
 		}
 	} catch (Exception e) {
 		e.printStackTrace();
 		System.out.println(e);
-		
 	}
 	return 0;
 	
