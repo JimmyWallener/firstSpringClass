@@ -70,15 +70,15 @@ public int multi(int digitOne, int digitTwo) {
 
 @RequestMapping(value = "/math", method = RequestMethod.GET)
 	public double math(double digitOne, String op, double digitTwo) {
-	
+	op = op.toLowerCase();
 	try {
 		
 		switch (op) {
-		case "+": return digitOne + digitTwo;
-		case "*": return digitOne * digitTwo;
-		case "-": return digitOne - digitTwo;
-		case "/": return digitOne / digitTwo;
-		case "p": return Math.pow(digitOne, digitTwo);
+		case "plus": return digitOne + digitTwo;
+		case "times": return digitOne * digitTwo;
+		case "minus": return digitOne - digitTwo;
+		case "divided": return digitOne / digitTwo;
+		case "expo": return Math.pow(digitOne, digitTwo);
 		default: return 0;
 		}
 	} catch (Exception e) {
